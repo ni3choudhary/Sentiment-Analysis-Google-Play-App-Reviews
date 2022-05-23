@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+		<meta charset="utf-8">
+		<title>Sentiment Analyzer</title>
+		<link rel="shortcut icon" href="">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
+         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', path='css/style.css') }}">
+		<script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+	</head>
+    <body>
+        <!-- Website Title -->
+    	<div class="container">
+    		<h2 class='container-heading'><span>Sentiment Analyzer</span> for Google Play Reviews</h2>
+            <div class='description'>
+    			<p>A NLP Web App, Built with Fastapi, Deployed using Heroku.</p>
+    		</div>
+    	</div>
+
+        <!-- Text Area -->
+        <div class="nlp-container">
+            <form action="{{ url_for('predict') }}" method="post">
+                <textarea class='message-box' name="text" rows="8" cols="80" placeholder="Enter Your Review Here..."></textarea><br/>
+                <br>
+                <input type="submit" class="my-cta-button" value="Predict">
+
+            </form>
+        </div>
+        
+        <!-- output -->
+        <div class="output">
+            {% if result %}
+
+                <p class="alert alert-success alert-dismissible" role="alert">
+                    <a href="/" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                    <span>Review - <strong>{{ result.sentiment }}</strong></span><br>
+                    <span>Confidence - <strong>{{ result.confidence }}</strong></span><br>
+                    <span>Probabilities - <strong>{{ result.probabilities }}</strong></span>
+                </p>
+
+            {% else %}
+                
+            {% endif %}
+        </div>
+
+        <!-- Footer -->
+        <div class='footer'>
+            <div class="contact">
+                <a target="_blank" href="https://github.com/ni3choudhary/Bert-Sentiment-Analysis-Google-Play-App-Reviews-Deployment"><i class="fab fa-github fa-lg contact-icon"></i></a>
+                <a target="_blank" href="https://www.linkedin.com/in/nitin-choudhary-334304150"><i class="fab fa-linkedin fa-lg contact-icon"></i></a>
+            </div>
+        </div>
+
+        
+    </body>
+</html>
