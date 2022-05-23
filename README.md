@@ -1,6 +1,6 @@
 # Sentiment-Analysis-Google-Play-App-Reviews
 
-The aim of this project is to create a custom dataset for sentiment analysis. Use the data to fine-tune a BERT model and deploy your NLP model as a API.
+The aim of this project is to create a custom dataset for sentiment analysis. Use the data to fine-tune a BERT model and deploy your NLP model as an API.
 
 
 • This repository consists of files required for end to end implementation of Sentiment Analysis of Google Play App Reviews ___Natural Language Processing Web App___ created with ___FastApi.
@@ -44,6 +44,8 @@ Use the files as following to create the project from scratch or create your own
 ```console
 $ uvicorn api:app --reload
 ```
+
+## App Demo
 
 ![GIF](readme_resources/sentiment-analyzer.gif)
 
