@@ -34,5 +34,16 @@ Use the files as following to create the project from scratch or create your own
 
 **3. sentiment_analysis_with_bert_and_hugging_face_using_torch.ipynb** to fine-tune BERT for sentiment analysis and save the best model for deployment purpose. Here, you'll do the required text preprocessing (special tokens, padding, and attention masks) and build a Sentiment Classifier using Transformers.
 
+**4. sentiment_analyzer/classifier/sentiment_classifier.py** to create a classifier that uses the BERT model.
+
+**5. sentiment_analyzer/classifier/model.py** to create an interface to abstract the inference logic. It exposes a single predict() method with all the text processing required to build a sentiment analysis model.
+
+- Now Inside sentiment_analyzer directory run **api.py** on terminal to start local server.
+```console
+$ uvicorn api:app --reload
+```
+
+![GIF](readme_resources/sentiment_analyzer.gif)
+
 • Please do ⭐ the repository, if it helped you in anyway.
 
