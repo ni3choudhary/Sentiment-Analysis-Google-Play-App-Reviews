@@ -45,7 +45,7 @@ Use the files as following to create the project from scratch or create your own
 $ uvicorn api:app --reload
 ```
 
-![GIF](readme_resources/sentiment_analyzer.gif)
+![GIF](readme_resources/sentiment-analyzer.gif)
 
 • Please do ⭐ the repository, if it helped you in anyway.
 
