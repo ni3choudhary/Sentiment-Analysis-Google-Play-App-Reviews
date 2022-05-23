@@ -1,2 +1,3 @@
 venv
 .ipynb_checkpoints
+sentiment-analyzer/assets/best_model_state.bin
